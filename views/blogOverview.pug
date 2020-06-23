@@ -1,0 +1,51 @@
+extends base
+
+block content
+
+    .banner-inner
+    ol.breadcrumb
+        li.breadcrumb-item
+            a(href="/") Home
+        li.breadcrumb-item.active Blog Posts
+    
+    section.main-content-w3layouts-agileits
+        .container
+            h3.tittle Blog Posts
+            .inner-sec
+          
+                .left-blog-info-w3layouts-agileits.text-left
+                    .row
+                        each blog in blogs
+                            .col-lg-4.card
+                                a(href=`/blogs/${blog.slug}`)
+                                    img.card-img-top.img-fluid(style="height: 250px;" src=`/images/blogs/${blog.image}` alt=`${blog.title}`)
+                                .card-body
+                                    ul.blog-icons.my-4
+                                        li
+                                            a(href="#")
+                                                - const date = `${blog.createdAt.toLocaleString('en-us', {day: 'numeric', month: 'long', year: 'numeric'})}`
+                                                i.far.fa-calendar-alt= date
+                                        li.mx-2
+                                            a(href=`/blogs/${blog._id}/comments`)
+                                                i.far.fa-comment= `${blog.comments.length}`
+                                        li
+                                            a(href="#")
+                                                i.fas.fa-eye
+                                                    |  2000
+                                    h5.card-title
+                                        a(href=`/blogs/${blog.slug}`)= `${blog.title.substring(0, 20)}...`
+                                    p.card-text.mb-3= `${blog.description.substring(0, 95)}...`
+                                    a.btn.btn-primary.read-m(href=`/blogs/${blog.slug}`) Read More
+                        
+                    nav(aria-label="Page navigation example")
+                        ul.pagination.justify-content-left.mt-4
+                            li.page-item.disabled
+                                a.page-link(href="#" tabindex="-1") Previous
+                            li.page-item
+                                a.page-link(href="#") 1
+                            li.page-item
+                                a.page-link(href="#") 2
+                            li.page-item
+                                a.page-link(href="#") 3
+                            li.page-item
+                                a.page-link(href="#") Next

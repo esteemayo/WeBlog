@@ -1,0 +1,471 @@
+extends base
+
+block content
+
+    .banner
+        #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+                li.active(data-target='#carouselExampleIndicators' data-slide-to='0')
+                li(data-target='#carouselExampleIndicators' data-slide-to='1')
+                li(data-target='#carouselExampleIndicators' data-slide-to='2')
+                li(data-target='#carouselExampleIndicators' data-slide-to='3')
+            .carousel-inner(role='listbox')
+                .carousel-item.active
+                    .carousel-caption
+                        h3
+                            | Create the lifestyle
+                            span you desire
+                        .read
+                            a.btn.btn-primary.read-m(href='single.html') Read More
+                .carousel-item.item2
+                    .carousel-caption
+                        h3
+                            | Engaging Purposeful
+                            span and Creative
+                        .read
+                            a.btn.btn-primary.read-m(href='single.html') Read More
+                .carousel-item.item3
+                    .carousel-caption
+                        h3
+                            | Create the lifestyle
+                            span you desire
+                        .read
+                            a.btn.btn-primary.read-m(href='single.html') Read More
+                .carousel-item.item4
+                    .carousel-caption
+                        h3
+                            | Engaging Purposeful
+                            span and Creative
+                        .read
+                            a.btn.btn-primary.read-m(href='single.html') Read More
+            a.carousel-control-prev(href='#carouselExampleIndicators' role='button' data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.sr-only Previous
+            a.carousel-control-next(href='#carouselExampleIndicators' role='button' data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.sr-only Next
+
+    section.bottom-slider
+        .course_demo1
+            ul#flexiselDemo1
+                li
+                    .blog-item
+                        img.img-fluid(src='images/1.jpg' alt=' ')
+                        button.btn.btn-primary.play(type='button' data-toggle='modal' data-target='#exampleModal')
+                            i.fas.fa-play
+                        .floods-text
+                            h3
+                                | The fed and inequality
+                                span
+                                    | Blogger
+                                    label |
+                                    i Adom Smith
+                li
+                    .blog-item
+                        img.img-fluid(src='images/2.jpg' alt=' ')
+                        button.btn.btn-primary.play(type='button' data-toggle='modal' data-target='#exampleModal')
+                            i.fas.fa-play
+                        .floods-text
+                            h3
+                                | The fastest insect in the world
+                                span
+                                    | Blogger
+                                    label |
+                                    i Adom Smith
+                li
+                    .blog-item
+                        img.img-fluid(src='images/3.jpg' alt=' ')
+                        button.btn.btn-primary.play(type='button' data-toggle='modal' data-target='#exampleModal')
+                            i.fas.fa-play
+                        .floods-text
+                            h3
+                                | Billionaires versus Millionaires
+                                span
+                                    | Blogger
+                                    label |
+                                    i Adom Smith
+                li
+                    .blog-item
+                        img.img-fluid(src='images/4.jpg' alt=' ')
+                        button.btn.btn-primary.play(type='button' data-toggle='modal' data-target='#exampleModal')
+                            i.fas.fa-play
+                        .floods-text
+                            h3
+                                | Billionaires versus Millionaires
+                                span
+                                    | Blogger
+                                    label |
+                                    i Adom Smith
+        #exampleModal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                            span(aria-hidden='true') &times;
+                    .modal-body
+                        .embed-responsive.embed-responsive-21by9
+                            iframe(src='https://player.vimeo.com/video/145787219')
+
+    section.main-content-w3layouts-agileits
+        .container
+            .row
+
+                .col-lg-8.left-blog-info-w3layouts-agileits.text-left
+                    .blog-grid-top
+                        .b-grid-top
+                            .blog_info_left_grid
+                                a(href='single.html')
+                                    img.img-fluid(src='images/b1.jpg' alt='')
+                            .blog-info-middle
+                                ul
+                                    li
+                                        a(href='#')
+                                            i.far.fa-calendar-alt
+                                            |  FEB 15,2018
+                                    li.mx-2
+                                        a(href='#')
+                                            i.far.fa-thumbs-up
+                                            |  201 Likes
+                                    li
+                                        a(href='#')
+                                            i.far.fa-comment
+                                            |  15 Comments
+                        h3
+                            a(href='single.html') Amet consectetur adipisicing 
+                        p
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+                            | aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea commodo consequat duis
+                            | aute irudre dolor in elit sed uta labore dolore reprehender
+                        a.btn.btn-primary.read-m(href='single.html') Read More
+
+                    .blog-mid-sec
+                        ul#flexiselDemo2
+                            li
+                                .blog-item
+                                    img.img-fluid(src='images/5.jpg' alt=' ')
+                                    button.btn.btn-primary.play.sec(type='button' data-toggle='modal' data-target='#exampleModal')
+                                        i.fas.fa-play
+                                    .floods-text
+                                        h3 Lorem ipsum 
+                            li
+                                .blog-item
+                                    img.img-fluid(src='images/6.jpg' alt=' ')
+                                    button.btn.btn-primary.play.sec(type='button' data-toggle='modal' data-target='#exampleModal')
+                                        i.fas.fa-play
+                                    .floods-text
+                                        h3 Lorem ipsum 
+                            li
+                                .blog-item
+                                    img.img-fluid(src='images/7.jpg' alt=' ')
+                                    button.btn.btn-primary.play.sec(type='button' data-toggle='modal' data-target='#exampleModal')
+                                        i.fas.fa-play
+                                    .floods-text
+                                        h3 Lorem ipsum 
+                            li
+                                .blog-item
+                                    img.img-fluid(src='images/8.jpg' alt=' ')
+                                    button.btn.btn-primary.play.sec(type='button' data-toggle='modal' data-target='#exampleModal')
+                                        i.fas.fa-play
+                                    .floods-text
+                                        h3 Lorem ipsum 
+
+                    .blog-girds-sec
+                        .row
+                            .col-md-6.blog-grid-top
+                                .b-grid-top
+                                    .blog_info_left_grid
+                                        a(href='single.html')
+                                            img.img-fluid(src='images/b2.jpg' alt='')
+                                    h3
+                                        a(href='single.html') Amet consectetur 
+                                    p
+                                        | Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt aliqua uta enim.
+                                ul.blog-icons
+                                    li
+                                        a(href='#')
+                                            i.far.fa-clock
+                                            |  5 Monts
+                                    li.mx-2
+                                        a(href='#')
+                                            i.far.fa-comment
+                                            |  21
+                                    li
+                                        a(href='#')
+                                            i.fas.fa-eye
+                                            |  2000
+                            .col-md-6.blog-grid-top
+                                .b-grid-top
+                                    .blog_info_left_grid
+                                        a(href='single.html')
+                                            img.img-fluid(src='images/b3.jpg' alt='')
+                                    h3
+                                        a(href='single.html') Amet adipisicing 
+                                    p
+                                        | Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt aliqua uta enim.
+                                ul.blog-icons
+                                    li
+                                        a(href='#')
+                                            i.far.fa-clock
+                                            |  5 Monts
+                                    li.mx-2
+                                        a(href='#')
+                                            i.far.fa-comment
+                                            |  21
+                                    li
+                                        a(href='#')
+                                            i.fas.fa-eye
+                                            |  2000
+
+                aside.col-lg-4.agileits-w3ls-right-blog-con.text-right
+                    .right-blog-info.text-left
+                        .tech-btm
+                            img.img-fluid(src='images/banner1.jpg' alt='')
+                        .tech-btm
+                            h4 Sign up to our newsletter
+                            p Pellentesque dui, non felis. Maecenas male 
+                            form(action='#' method='post')
+                                input(type='email' placeholder='Email' required='')
+                                input(type='submit' value='Subscribe')
+                        .tech-btm.widget_social
+                            h4 Stay Connect
+                            ul
+                                li
+                                    a.twitter(href='#')
+                                        i.fab.fa-twitter
+                                        span.count 317K
+                                        |  Twitter Followers
+                                li
+                                    a.facebook(href='#')
+                                        i.fab.fa-facebook-f
+                                        span.count 218k
+                                        |  Twitter Followers
+                                li
+                                    a.dribble(href='#')
+                                        i.fab.fa-dribbble
+                                        span.count 215k
+                                        |  Dribble Followers
+                                li
+                                    a.pin(href='#')
+                                        i.fab.fa-pinterest
+                                        span.count 190k
+                                        |  Pinterest Followers
+                        .tech-btm
+                            h4 Recent Posts
+                            .blog-grids.row.mb-3
+                                .col-md-5.blog-grid-left
+                                    a(href='single.html')
+                                        img.img-fluid(src='images/1.jpg' alt='')
+                                .col-md-7.blog-grid-right
+                                    h5
+                                        a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                    .sub-meta
+                                        span
+                                            i.far.fa-clock
+                                            |  20 Jan, 2018
+                            .blog-grids.row.mb-3
+                                .col-md-5.blog-grid-left
+                                    a(href='single.html')
+                                        img.img-fluid(src='images/5.jpg' alt='')
+                                .col-md-7.blog-grid-right
+                                    h5
+                                        a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                    .sub-meta
+                                        span
+                                            i.far.fa-clock
+                                            |  20 Jan, 2018
+                                .clearfix  
+                            .blog-grids.row.mb-3
+                                .col-md-5.blog-grid-left
+                                    a(href='single.html')
+                                        img.img-fluid(src='images/3.jpg' alt='')
+                                .col-md-7.blog-grid-right
+                                    h5
+                                        a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                    .sub-meta
+                                        span
+                                            i.far.fa-clock
+                                            |  20 Feb, 2018
+                            .blog-grids.row.mb-3
+                                .col-md-5.blog-grid-left
+                                    a(href='single.html')
+                                        img.img-fluid(src='images/2.jpg' alt='')
+                                .col-md-7.blog-grid-right
+                                    h5
+                                        a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                    .sub-meta
+                                        span
+                                            i.far.fa-clock
+                                            |  20 Jan, 2018
+                            .blog-grids.row.mb-3
+                                .col-md-5.blog-grid-left
+                                    a(href='single.html')
+                                        img.img-fluid(src='images/4.jpg' alt='')
+                                .col-md-7.blog-grid-right
+                                    h5
+                                        a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                    .sub-meta
+                                        span
+                                            i.far.fa-clock
+                                            |  20 Jan, 2018
+                            .blog-grids.row.mb-3
+                                .col-md-5.blog-grid-left
+                                    a(href='single.html')
+                                        img.img-fluid(src='images/6.jpg' alt='')
+                                .col-md-7.blog-grid-right
+                                    h5
+                                        a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                    .sub-meta
+                                        span
+                                            i.far.fa-clock
+                                            |  20 Feb, 2018
+
+    section.middle-sec-agileinfo-w3ls
+        .container
+            .row.inner-sec
+                .col-md-4.news-left
+                    ul#demo1_thumbs.list-inline
+                        li
+                            a(href='images/m1.jpg')
+                                img(src='images/m1.jpg' alt='' data-desoslide-caption='<h3>Latest Post 1</h3>')
+                                .mid-text-info
+                                    h4 Maecenas aliqua
+                                    p Integer 
+                                    .sub-meta
+                                        span
+                                            i.far.fa-clock
+                                            |  20 Feb, 2018
+                        li
+                            a(href='images/m2.jpg')
+                                img(src='images/m2.jpg' alt='' data-desoslide-caption='<h3>Latest Post 2</h3>')
+                                .mid-text-info
+                                    h4 Maecenas aliqua
+                                    p Integer 
+                                    .sub-meta
+                                        span
+                                            i.far.fa-clock
+                                            |  20 Feb, 2018
+                        li
+                            a(href='images/m3.jpg')
+                                img(src='images/m3.jpg' alt='' data-desoslide-caption='<h3>Latest Post 3</h3>')
+                                .mid-text-info
+                                    h4 Maecenas aliqua
+                                    p Integer 
+                                    .sub-meta
+                                        span
+                                            i.far.fa-clock
+                                            |  20 Feb, 2018
+                        li
+                            a(href='images/m4.jpg')
+                                img(src='images/m4.jpg' alt='' data-desoslide-caption='<h3>Latest Post 4</h3>')
+                                .mid-text-info
+                                    h4 Maecenas aliqua
+                                    p Integer 
+                                    .sub-meta
+                                        span
+                                            i.far.fa-clock
+                                            |  20 Feb, 2018
+                #demo1_main_image.col-md-8.news-right
+                .clearfix  
+
+    section.main-content-w3layouts-agileits
+        .container
+            .row
+
+                .col-lg-8.left-blog-info-w3layouts-agileits.text-left
+                    .blog-grid-top
+                        .b-grid-top
+                            .blog_info_left_grid
+                                a(href='single.html')
+                                    img.img-fluid(src='images/b4.jpg' alt='')
+                            .blog-info-middle
+                                ul
+                                    li
+                                        a(href='#')
+                                            i.far.fa-calendar-alt
+                                            |  FEB 15,2018
+                                    li.mx-2
+                                        a(href='#')
+                                            i.far.fa-thumbs-up
+                                            |  201 Likes
+                                    li
+                                        a(href='#')
+                                            i.far.fa-comment
+                                            |  15 Comments
+                        h3
+                            a(href='single.html') Amet consectetur adipisicing 
+                        p
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+                            | aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea commodo consequat duis
+                            | aute irudre dolor in elit sed uta labore dolore reprehender
+                        a.btn.btn-primary.read-m(href='single.html') Read More
+
+                aside.col-lg-4.agileits-w3ls-right-blog-con.text-left
+                    .tech-btm
+                        h4 Recent Posts
+                        .blog-grids.row.mb-3
+                            .col-md-5.blog-grid-left
+                                a(href='single.html')
+                                    img.img-fluid(src='images/5.jpg' alt='')
+                            .col-md-7.blog-grid-right
+                                h5
+                                    a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                .sub-meta
+                                    span
+                                        i.far.fa-clock
+                                        |  20 Jan, 2018
+                        .blog-grids.row.mb-3
+                            .col-md-5.blog-grid-left
+                                a(href='single.html')
+                                    img.img-fluid(src='images/6.jpg' alt='')
+                            .col-md-7.blog-grid-right
+                                h5
+                                    a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                .sub-meta
+                                    span
+                                        i.far.fa-clock
+                                        |  20 Jan, 2018
+                        .blog-grids.row.mb-3
+                            .col-md-5.blog-grid-left
+                                a(href='single.html')
+                                    img.img-fluid(src='images/7.jpg' alt='')
+                            .col-md-7.blog-grid-right
+                                h5
+                                    a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                .sub-meta
+                                    span
+                                        i.far.fa-clock
+                                        |  20 Feb, 2018
+                        .blog-grids.row.mb-3
+                            .col-md-5.blog-grid-left
+                                a(href='single.html')
+                                    img.img-fluid(src='images/8.jpg' alt='')
+                            .col-md-7.blog-grid-right
+                                h5
+                                    a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                .sub-meta
+                                    span
+                                        i.far.fa-clock
+                                        |  20 Jan, 2018
+                        .blog-grids.row.mb-3
+                            .col-md-5.blog-grid-left
+                                a(href='single.html')
+                                    img.img-fluid(src='images/4.jpg' alt='')
+                            .col-md-7.blog-grid-right
+                                h5
+                                    a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                .sub-meta
+                                    span
+                                        i.far.fa-clock
+                                        |  20 Jan, 2018
+                        .blog-grids.row.mb-3
+                            .col-md-5.blog-grid-left
+                                a(href='single.html')
+                                    img.img-fluid(src='images/6.jpg' alt='')
+                            .col-md-7.blog-grid-right
+                                h5
+                                    a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                                .sub-meta
+                                    span
+                                        i.far.fa-clock
+                                        |  20 Feb, 2018
+

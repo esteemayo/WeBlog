@@ -1,0 +1,124 @@
+doctype html
+
+head
+  title Weblog | #{title}
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  meta(charset='utf-8')
+  script.
+    addEventListener("load", function () {
+    setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+    window.scrollTo(0, 1);
+    }
+  link(rel="stylesheet", href="/css/custom.css")
+  link(href='/css/bootstrap.css' rel='stylesheet' type='text/css')
+  link(rel='stylesheet' href='/css/jquery.desoslide.css')
+  link(href='/css/style.css' rel='stylesheet' type='text/css')
+  link(href='/css/fontawesome-all.css' rel='stylesheet')
+  link(href='//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800' rel='stylesheet')
+body
+
+   include _header
+
+   block content
+      h1 This is a placeholder heading
+
+   include _footer
+
+   script(src='js/jquery-2.2.3.min.js')
+
+   script(src='js/jquery.desoslide.js')
+   script.
+      $('#demo1_thumbs').desoSlide({
+         main: {
+            container: '#demo1_main_image',
+            cssClass: 'img-responsive'
+        },
+        effect: 'sideFade',
+        caption: true
+      });
+
+   script.
+      $(window).load(function () {
+         $("#flexiselDemo1").flexisel({
+            visibleItems: 3,
+            animationSpeed: 1000,
+            autoPlay: true,
+            autoPlaySpeed: 3000,
+            pauseOnHover: true,
+            enableResponsiveBreakpoints: true,
+            responsiveBreakpoints: {
+               portrait: {
+                  changePoint: 480,
+                  visibleItems: 1
+               },
+               landscape: {
+                  changePoint: 640,
+                  visibleItems: 2
+               },
+               tablet: {
+                  changePoint: 768,
+                  visibleItems: 3
+               }
+            }
+         });
+      });
+   script.
+      $(window).load(function () {
+         $("#flexiselDemo2").flexisel({
+            visibleItems: 3,
+            animationSpeed: 1000,
+            autoPlay: true,
+            autoPlaySpeed: 3000,
+            pauseOnHover: true,
+            enableResponsiveBreakpoints: true,
+            responsiveBreakpoints: {
+               portrait: {
+                  changePoint: 480,
+                  visibleItems: 1
+               },
+               landscape: {
+                  changePoint: 640,
+                  visibleItems: 2
+               },
+               tablet: {
+                  changePoint: 768,
+                  visibleItems: 3
+               }
+            }
+         });
+      });
+   script(src='js/jquery.flexisel.js')
+   script(src='js/move-top.js')
+   script(src='/js/easing.js')
+   script.
+      jQuery(document).ready(function ($) {
+         $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+               scrollTop: $(this.hash).offset().top
+            }, 900);
+        });
+      });
+	  
+   script.
+      $(document).ready(function () {
+         var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+         };
+         $().UItoTop({
+            easingType: 'easeOutQuart'
+         });
+      });
+   a#toTop.scroll(href='#home' style='display: block;')
+      span#toTopHover(style='opacity: 1;')
+
+   script(src='/js/bootstrap.js')
+   script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
+   script(src="/js/authService.js")
+   script(src="/js/blog.js")
+   script(src="/js/comment.js")

@@ -1,0 +1,127 @@
+extends base
+
+block content
+
+    .banner-inner
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href="index.html") Home
+      li.breadcrumb-item.active Single
+    
+    section.banner-bottom
+      
+      .container
+        .row
+          
+          .col-lg-8.left-blog-info-w3layouts-agileits.text-left
+            .blog-grid-top
+              .b-grid-top
+                .blog_info_left_grid
+                  a(href="single.html")
+                    img.img-fluid(src="/images/b1.jpg" alt="")
+                .blog-info-middle
+                  ul
+                    li
+                      a(href="#")
+                        i.far.fa-calendar-alt
+                        |  FEB 15,2018
+                    li.mx-2
+                      a(href="#")
+                        i.far.fa-thumbs-up
+                        |  201 Likes
+                    li
+                      a(href="#")
+                        i.far.fa-comment
+                        |  15 Comments
+              h3
+                a(href="single.html") Amet consectetur adipisicing 
+              p
+                | Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+                | aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea commodo consequat duis
+                | aute irudre dolor in elit sed uta labore dolore reprehender
+              a.btn.btn-primary.read-m(href="single.html") Read More
+            .comment-top
+              h4 Comments
+              .media
+                img.img-fluid(src="/images/t1.jpg" alt="")
+                .media-body
+                  h5.mt-0 Joseph Goh
+                  p
+                    | Lorem Ipsum convallis diam consequat magna vulputate malesuada. id dignissim sapien velit id felis ac cursus eros.
+                    | Cras a ornare elit.
+                  .media.mt-3
+                    a.d-flex.pr-3(href="#")
+                      img.img-fluid(src="/images/t2.jpg" alt="")
+                    .media-body
+                      h5.mt-0 Richard Spark
+                      p
+                        | Lorem Ipsum convallis diam consequat magna vulputate malesuada. id dignissim sapien velit id felis ac cursus eros.
+                        | Cras a ornare elit.
+            .comment-top
+              h4 Leave a Comment
+              .comment-bottom
+                form(action="#" method="post")
+                  input.form-control(type="text" name="Name" placeholder="Name" required="")
+                  input.form-control(type="email" name="Email" placeholder="Email" required="")
+                  input.form-control(type="text" name="Subject" placeholder="Subject" required="")
+                  textarea.form-control(name="Message" placeholder="Message..." required="")
+                  button.btn.btn-primary.submit(type="submit") Submit
+          
+          aside.col-lg-4.agileits-w3ls-right-blog-con.text-right
+            .right-blog-info.text-left
+              .tech-btm
+                img.img-fluid(src="/images/banner1.jpg" alt="")
+              .tech-btm
+                h4 Sign up to our newsletter
+                p Pellentesque dui, non felis. Maecenas male 
+                form(action="#" method="post")
+                  input(type="email" placeholder="Email" required="")
+                  input(type="submit" value="Subscribe")
+              .tech-btm
+                h4 Categories
+                ul.list-group.single
+                  li.list-group-item.d-flex.justify-content-between.align-items-center
+                    | Cras justo odio
+                    span.badge.badge-primary.badge-pill 14
+                  li.list-group-item.d-flex.justify-content-between.align-items-center
+                    | Dapibus ac facilisis in
+                    span.badge.badge-primary.badge-pill 2
+                  li.list-group-item.d-flex.justify-content-between.align-items-center
+                    | Morbi leo risus
+                    span.badge.badge-primary.badge-pill 1
+              .tech-btm
+                h4 Top stories of the week
+                .blog-grids.row.mb-3
+                  .col-md-5.blog-grid-left
+                    a(href="single.html")
+                      img.img-fluid(src="/images/1.jpg" alt="")
+                  .col-md-7.blog-grid-right
+                    h5
+                      a(href="single.html") Pellentesque dui, non felis. Maecenas male non felis 
+                    .sub-meta
+                      span
+                        i.far.fa-clock
+                        |  20 Jan, 2018
+                .blog-grids.row.mb-3
+                  .col-md-5.blog-grid-left
+                    a(href="single.html")
+                      img.img-fluid(src="/images/6.jpg" alt="")
+                  .col-md-7.blog-grid-right
+                    h5
+                      a(href="single.html") Pellentesque dui, non felis. Maecenas male non felis 
+                    .sub-meta
+                      span
+                        i.far.fa-clock
+                        |  20 Feb, 2018
+              .single-gd.my-5.tech-btm
+                
+              .single-gd.tech-btm
+                h4 Recent Post
+                .blog-grids
+                  .blog-grid-left
+                    a(href="single.html")
+                      img.img-fluid(src="/images/b1.jpg" alt="")
+                  .blog-grid-right
+                    h5
+                      a(href="single.html") Pellentesque dui, non felis. Maecenas male
+                  .clearfix  

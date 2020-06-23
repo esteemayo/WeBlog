@@ -1,0 +1,61 @@
+extends base
+
+block content
+
+    .banner-inner
+    ol.breadcrumb
+        li.breadcrumb-item
+            a(href="index.html") Home
+        li.breadcrumb-item.active Contact
+    
+    section.main-content-w3layouts-agileits
+        h3.tittle Contact Us
+        p.sub.text-center We love to discuss your idea
+        .contact-map.inner-sec
+            iframe.map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100949.24429313939!2d-122.44206553967531!3d37.75102885910819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1472190196783" style="border:0" allowfullscreen="")
+        .ad-inf-sec.bg-light
+            .container
+                .address.row
+                    .col-lg-4.address-grid
+                        .row.address-info
+                            .col-md-4.address-left.text-center
+                                i.far.fa-map
+                            .col-md-8.address-right.text-left
+                                h6 Address
+                                p
+                                | California, USA
+                    .col-lg-4.address-grid
+                        .row.address-info
+                            .col-md-4.address-left.text-center
+                                i.far.fa-envelope
+                            .col-md-8.address-right.text-left
+                                h6 Email
+                                p
+                                    | Email :
+                                    a(href="mailto:developers@weblog.io")  mail@example.com
+                    .col-lg-4.address-grid
+                        .row.address-info
+                            .col-md-4.address-left.text-center
+                                i.fas.fa-mobile-alt
+                            .col-md-8.address-right.text-left
+                                h6 Phone
+                                p +1 234 567 8901
+        .container
+            .contact_grid_right
+                form(action="/contact" method="post")
+                    .row.contact_left_grid
+                        .col-md-6.con-left
+                            .form-group
+                                label(for="validationCustom01 my-2") Name
+                                input.form-control(type="text" name="name" placeholder="" required="")
+                            .form-group
+                                label(for="exampleFormControlInput1") Email
+                                input.form-control(type="email" name="email" placeholder="" required="")
+                            .form-group
+                                label(for="validationCustom03 my-2") Subject
+                                input.form-control(type="text" name="subject" placeholder="" required="")
+                        .col-md-6.con-right
+                            .form-group
+                                label(for="textarea") Message
+                                textarea#textarea(placeholder="" name="message")
+                            input.form-control(type="submit" value="Submit")

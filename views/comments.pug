@@ -1,0 +1,30 @@
+extends base
+
+block content
+
+    .banner-inner
+    ol.breadcrumb
+        li.breadcrumb-item
+            a(href="/") Home
+        li.breadcrumb-item.active Comments
+
+    section.banner-bottom
+      
+        .container
+            .row
+          
+                .col-lg-8.left-blog-info-w3layouts-agileits.text-left
+
+                    .comment-top
+                        h1.heading__primary Comments
+                        .comment__wrapper
+                            if (comments.length > 0)
+                                h4.comment__heading= `Comments (${comments.length})`
+                                    each comment in comments
+                                        .media(style="margin-bottom: 30px;")
+                                            img.img-fluids(src=`/images/users/${comment.user.photo}` alt=`${comment.created_at.toDateString()}`)
+                                            .media-body
+                                                h5.comment__user.mt-0= `${comment.user.firstName}`
+                                                p= `${comment.comment}`
+                            else
+                                h4.comment__heading No comments yet

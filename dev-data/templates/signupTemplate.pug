@@ -1,0 +1,33 @@
+extends base
+
+block content
+
+    .banner-inner
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href="index.html") Home
+      li.breadcrumb-item.active Register
+
+    section.main-content-w3layouts-agileits
+      .container
+        h3.tittle Register Now
+        .inner-sec
+          .login.p-5.bg-light.mx-auto.mw-100
+            form(action="#" method="post")
+              .form-row
+                .col-md-6.mb-3
+                  label(for="validationCustom01") First name
+                  input#validationDefault01.form-control(type="text" placeholder="" required="")
+                .col-md-6.mb-3
+                  label(for="validationCustom02") Last name
+                  input#validationDefault02.form-control(type="text" placeholder="" required="")
+              .form-row
+                .form-group.col-md-6
+                  label(for="exampleInputPassword1 mb-2") Password
+                  input#password1.form-control(type="password" placeholder="" required="")
+                .form-group.col-md-6
+                  label(for="exampleInputPassword2 mb-2") Confirm Password
+                  input#password2.form-control(type="password" placeholder="" required="")
+              button.btn.btn-primary.submit.mb-4(type="submit") Register
+              p
+                a(href="#") By clicking Signup, I agree to your terms

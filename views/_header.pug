@@ -1,0 +1,64 @@
+mixin social(link, icon, text, logout)
+  a(href=`${link ? link : ''}` class=`${logout ? 'logout--btn' : ''}`)
+    i(class=`fas fa-${icon}`)
+    |  #{text}
+
+header
+  .top-bar_sub_w3layouts.container-fluid
+    .row
+      .col-md-4.logo.text-left
+        a.navbar-brand(href='/')
+          i.fab.fa-linode
+          |  Weblog
+      .col-md-4.top-forms.text-center.mt-lg-3.mt-md-1.mt-0
+        if user
+          span Welcome Back #{user.firstName}!
+        if !user
+          span.mx-lg-4.mx-md-2.mx-1
+            +social('/login', 'lock', 'Sign In')
+          span
+            +social('/signup', 'user', 'Register')
+        else
+          span
+            //- +social(false, 'user', 'Logout', true)
+            a.logout--btn
+              i.far.fa-user
+              |  Logout
+      .col-md-4.log-icons.text-right
+        ul.social_list1.mt-3
+          li
+            a.facebook1.mx-2(href='#')
+              i.fab.fa-facebook-f
+          li
+            a.twitter2(href='#')
+              i.fab.fa-twitter
+          li
+            a.dribble3.mx-2(href='#')
+              i.fab.fa-dribbble
+          li
+            a.pin(href='#')
+              i.fab.fa-pinterest-p
+  #home.header_top
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      button.navbar-toggler.navbar-toggler-right.mx-auto(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item(class=`${page === '/' ? 'active' : ''}`)
+            a.nav-link(href='/')
+              | Home
+              span.sr-only (current)
+          li.nav-item(class=`${page === '/blogs' ? 'active' : ''}`)
+            a.nav-link(href='/blogs') Blog
+          //- - if (user.role === 'admin')
+            li.nav-item(class=`${page === '/blogs/add' ? 'active' : ''}`)
+              a.nav-link(href='/blogs/add') Add
+          li.nav-item(class=`${page === '/contact' ? 'active' : ''}`)
+            a.nav-link(href='/contact') Contact
+          li.nav-item(class=`${page === '/about' ? 'active' : ''}`)
+            a.nav-link(href='/contact') About
+        if (page === '/' || page === '/blogs')
+          form.form-inline.my-2.my-lg-0.header-search(action='/blogs' method='GET')
+            input.form-control.mr-sm-2(type='search' placeholder='Search here...' name='search')
+            button.btn.btn1.my-2.my-sm-0(type='submit')
+              i.fas.fa-search

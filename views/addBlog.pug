@@ -1,0 +1,35 @@
+extends base
+
+block content
+
+    .banner-inner
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href="/") Home
+      li.breadcrumb-item.active Create A New Blog Post
+
+    section.main-content-w3layouts-agileits
+      .container
+        h3.tittle Create a new blog post
+        .inner-sec
+          .login.p-5.bg-light.mx-auto.mw-100
+            //- With our API
+            //- form.form--add-blog
+            //- Without API
+            form(action="/blogs/add", method="POST" enctype="multipart/form-data")
+              .form-row
+                .col-md-6.mb-3
+                  label(for="validationCustom01") Title
+                  input#validationDefault01.form-control.title(type="text" name="title" placeholder="" required="")
+                .col-md-6.mb-3
+                  label(for="validationCustom02") Description
+                  textarea.form-control(name="description" id="description" placeholder="" required="")
+                //-   input#validationDefault02.form-control.description(type="text" placeholder="" required="")
+              .form-row
+                .col-md-6.mb-3
+                  label(for="tags") Tags
+                  input#validationDefault03.form-control.tags(type="text" name="tags" multiple placeholder="" required="")
+                .col-md-6.mb-3
+                  label(for="image") Image
+                  input#validationDefault04.form-control.image(type="file" name="image" accept="image/*")
+              button.btn.btn-primary.submit.mb-4(type="submit") Create

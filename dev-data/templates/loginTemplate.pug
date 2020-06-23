@@ -1,0 +1,30 @@
+extends base
+
+block content
+
+    .banner-inner
+    ol.breadcrumb
+        li.breadcrumb-item
+            a(href='index.html') Home
+        li.breadcrumb-item.active Signin
+    
+    section.main-content-w3layouts-agileits
+        .container
+            h3.tittle Sign In Now
+            .row.inner-sec
+                .login.p-5.bg-light.mx-auto.mw-100
+                    form(action='#' method='post')
+                        .form-group
+                            label(for='exampleInputEmail1 mb-2') Email address
+                            input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='' required='')
+                            small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+                        .form-group
+                            label(for='exampleInputPassword1 mb-2') Password
+                            input#exampleInputPassword1.form-control(type='password' placeholder='' required='')
+                        .form-check.mb-2
+                            input#exampleCheck1.form-check-input(type='checkbox')
+                            label.form-check-label(for='exampleCheck1') Check me out
+                        button.btn.btn-primary.submit.mb-4(type='submit') Sign In
+                        p
+                            a(href='register.html')  Don&apos;t have an account?
+    

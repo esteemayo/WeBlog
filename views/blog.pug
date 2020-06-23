@@ -1,0 +1,87 @@
+extends base
+
+block content
+
+    .banner-inner
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href="/") Home
+      li.breadcrumb-item.active #{blog.title}
+    
+    section.banner-bottom
+      
+      .container
+        .row
+          
+          .col-lg-8.left-blog-info-w3layouts-agileits.text-left
+            .blog-grid-top
+              .b-grid-top
+                .blog_info_left_grid
+                  a(href="#")
+                    img.img-fluid(style="width: 100%;" src=`/images/blogs/${blog.image}` alt="")
+                .blog-info-middle
+                  ul
+                    li
+                      a(href="#")
+                        - const date = `${blog.createdAt.toLocaleString('en-us', {day: 'numeric', month: 'long', year: 'numeric'})}`
+                        i.far.fa-calendar-alt= date
+                    li.mx-2
+                    li
+                      a(href="#")
+                        i.far.fa-comment= `${blog.comments.length} Comments`
+              h3= `${blog.title}` 
+              - const paragraphs = blog.description.split('\n');
+              each p in paragraphs
+                p= p
+            //- p= `${blog.description}`
+
+            .comment-top
+              h4.comment__heading= `Comments (${blog.comments.length})`
+              each comment in blog.comments
+                .media(style="margin-bottom: 30px;")
+                    img.img-fluids(src=`/images/users/${comment.user.photo}` alt=`${comment.created_at.toDateString()}`)
+                    .media-body
+                        h5.comment__user.mt-0= `${comment.user.firstName}`
+                        p= `${comment.comment}`
+
+            .comment-top
+              h4.comment__heading Leave a Comment
+              if (user)
+                - if (user && user.role === 'user')
+                  .comment-bottom
+                    //- form.form--comment
+                    form.form--comment(action=`/blogs/${blog._id}/comments` method="post")
+                      textarea.form-control(name="comment" id="comment" placeholder="Comment..." required="")
+                      button.btn.btn-primary.submit(type="submit") Submit
+                    //-   button.btn.btn-primary.submit#comment-blog(type="submit" data-comment-id=`${blog._id}`) Submit
+              else
+                p
+                  a(href="/login") Please log in to leave comment!
+          
+          aside.col-lg-4.agileits-w3ls-right-blog-con.text-right
+            .right-blog-info.text-left
+
+              .tech-btm
+                h4 Tags
+                ul.list-group.single
+                    each tag in blog.tags
+                        li.list-group-item.d-flex.justify-content-between.align-items-center
+                            a(href=`/blogs/${blog.slug}/${tag}`)= `${tag}`
+                            //- span.badge.badge-primary.badge-pill= `${tag.length}`
+
+              .tech-btm
+                h4 Top stories of the week
+                each blog in blogs
+                    .blog-grids.row.mb-3
+                        .col-md-5.blog-grid-left
+                            a(href=`/blogs/${blog.slug}`)
+                                img.img-fluid(style="width: 150px; height: 100px" src=`/images/blogs/${blog.image}` alt=`${blog.title}`)
+                        .col-md-7.blog-grid-right
+                            h5
+                                a(href=`/blogs/${blog.slug}`)= `${blog.title.substring(0, 52)}`
+                            .sub-meta
+                            span
+                                i.far.fa-clock= date
+                                
+              .single-gd.my-5.tech-btm
+                

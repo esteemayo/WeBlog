@@ -1,0 +1,39 @@
+extends base
+
+block content
+
+    .banner-inner
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href="index.html") Home
+      li.breadcrumb-item.active Register
+
+    section.main-content-w3layouts-agileits
+      .container
+        h3.tittle Register Now
+        .inner-sec
+          .login.p-5.bg-light.mx-auto.mw-100
+            form.form--signup
+              .form-row
+                .col-md-6.mb-3
+                  label(for="validationCustom01") First name
+                  input#validationDefault01.form-control.firstName(type="text" placeholder="" required="")
+                .col-md-6.mb-3
+                  label(for="validationCustom02") Last name
+                  input#validationDefault02.form-control.lastName(type="text" placeholder="" required="")
+              .form-row
+                .col-md-6.mb-3
+                  label(for="email") Email
+                  input#validationDefault03.form-control.email(type="email" placeholder="user@example.com" required="")
+                  small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+                .col-md-6.mb-3
+                  label(for="photo") Photo
+                  input#validationDefault04.form-control.photo(type="file" name="photo" accept="image/*")  
+              .form-row
+                .form-group.col-md-6
+                  label(for="exampleInputPassword1 mb-2") Password
+                  input#password1.form-control.password(type="password" placeholder="********" required="")
+                .form-group.col-md-6
+                  label(for="exampleInputPassword2 mb-2") Confirm Password
+                  input#password2.form-control.passwordConfirm(type="password" placeholder="********" required="")
+              button.btn.btn-primary.submit.mb-4(type="submit") Register

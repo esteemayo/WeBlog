@@ -1,0 +1,204 @@
+extends base
+
+block content
+
+    .banner
+        #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+                li.active(data-target='#carouselExampleIndicators' data-slide-to='0')
+                li(data-target='#carouselExampleIndicators' data-slide-to='1')
+                li(data-target='#carouselExampleIndicators' data-slide-to='2')
+                li(data-target='#carouselExampleIndicators' data-slide-to='3')
+            .carousel-inner(role='listbox')
+                .carousel-item.active
+                    .carousel-caption
+                        h3
+                            | Create the lifestyle
+                            span you desire
+                        .read
+                            a.btn.btn-primary.read-m(href='/blogs') Read More
+                .carousel-item.item2
+                    .carousel-caption
+                        h3
+                            | Engaging Purposeful
+                            span and Creative
+                        .read
+                            a.btn.btn-primary.read-m(href='/blogs') Read More
+                .carousel-item.item3
+                    .carousel-caption
+                        h3
+                            | Create the lifestyle
+                            span you desire
+                        .read
+                            a.btn.btn-primary.read-m(href='/blogs') Read More
+                .carousel-item.item4
+                    .carousel-caption
+                        h3
+                            | Engaging Purposeful
+                            span and Creative
+                        .read
+                            a.btn.btn-primary.read-m(href='/blogs') Read More
+            a.carousel-control-prev(href='#carouselExampleIndicators' role='button' data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.sr-only Previous
+            a.carousel-control-next(href='#carouselExampleIndicators' role='button' data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.sr-only Next
+
+    section.bottom-slider
+        .course_demo1
+            ul#flexiselDemo1
+                li
+                    .blog-item
+                        img.img-fluid(src='images/1.jpg' alt=' ')
+                        button.btn.btn-primary.play(type='button' data-toggle='modal' data-target='#exampleModal')
+                            i.fas.fa-play
+                        .floods-text
+                            h3
+                                | The fed and inequality
+                                span
+                                    | Blogger
+                                    label |
+                                    i Adom Smith
+                li
+                    .blog-item
+                        img.img-fluid(src='images/2.jpg' alt=' ')
+                        button.btn.btn-primary.play(type='button' data-toggle='modal' data-target='#exampleModal')
+                            i.fas.fa-play
+                        .floods-text
+                            h3
+                                | The fastest insect in the world
+                                span
+                                    | Blogger
+                                    label |
+                                    i Adom Smith
+                li
+                    .blog-item
+                        img.img-fluid(src='images/3.jpg' alt=' ')
+                        button.btn.btn-primary.play(type='button' data-toggle='modal' data-target='#exampleModal')
+                            i.fas.fa-play
+                        .floods-text
+                            h3
+                                | Billionaires versus Millionaires
+                                span
+                                    | Blogger
+                                    label |
+                                    i Adom Smith
+                li
+                    .blog-item
+                        img.img-fluid(src='images/4.jpg' alt=' ')
+                        button.btn.btn-primary.play(type='button' data-toggle='modal' data-target='#exampleModal')
+                            i.fas.fa-play
+                        .floods-text
+                            h3
+                                | Billionaires versus Millionaires
+                                span
+                                    | Blogger
+                                    label |
+                                    i Adom Smith
+        #exampleModal.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        button.close(type='button' data-dismiss='modal' aria-label='Close')
+                            span(aria-hidden='true') &times;
+                    .modal-body
+                        .embed-responsive.embed-responsive-21by9
+                            iframe(src='https://player.vimeo.com/video/145787219')
+
+    section.middle-sec-agileinfo-w3ls
+        .container
+            .row.inner-sec
+                .col-md-4.news-left
+                    ul#demo1_thumbs.list-inline
+                        each  blog in blogs
+                            li
+                                a(href=`/images/blogs/${blog.image}`)
+                                    img(src=`/images/blogs/${blog.image}` alt='' data-desoslide-caption=`<h3>${blog.title}</h3>`)
+                                    .mid-text-info
+                                        h4= `${blog.title.substring(0, 10)}`
+                                        p= `${blog.description.substring(0, 10)}` 
+                                        .sub-meta
+                                            span
+                                                - const date = `${blog.createdAt.toLocaleString('en-us', {day: 'numeric', month: 'long', year: 'numeric'})}`
+                                                i.far.fa-clock= date
+                        
+                #demo1_main_image.col-md-8.news-right
+                .clearfix  
+
+    section.main-content-w3layouts-agileits
+        .container
+            .row
+
+                .col-lg-8.left-blog-info-w3layouts-agileits.text-left
+
+                aside.col-lg-4.agileits-w3ls-right-blog-con.text-left
+                    .tech-btm
+                        h4 Recent Posts
+                        each b in recentBlogs
+                            .blog-grids.row.mb-3
+                                .col-md-5.blog-grid-left
+                                    a(href=`/blogs/${b.slug}`)
+                                        img.img-fluid(src=`/images/blogs/${b.image}` alt=`${b.title}`)
+                                .col-md-7.blog-grid-right
+                                    h5
+                                        a(href=`/blogs/${b.slug}`)= `${b.title.substring(0, 52)}` 
+                                    .sub-meta
+                                        span
+                                            i.far.fa-clock= `${b.createdAt.toLocaleString('en-us', {day: 'numeric', month: 'long', year: 'numeric'})}`
+                        //- .blog-grids.row.mb-3
+                        //-     .col-md-5.blog-grid-left
+                        //-         a(href='single.html')
+                        //-             img.img-fluid(src='images/6.jpg' alt='')
+                        //-     .col-md-7.blog-grid-right
+                        //-         h5
+                        //-             a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                        //-         .sub-meta
+                        //-             span
+                        //-                 i.far.fa-clock
+                        //-                 |  20 Jan, 2018
+                        //- .blog-grids.row.mb-3
+                        //-     .col-md-5.blog-grid-left
+                        //-         a(href='single.html')
+                        //-             img.img-fluid(src='images/7.jpg' alt='')
+                        //-     .col-md-7.blog-grid-right
+                        //-         h5
+                        //-             a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                        //-         .sub-meta
+                        //-             span
+                        //-                 i.far.fa-clock
+                        //-                 |  20 Feb, 2018
+                        //- .blog-grids.row.mb-3
+                        //-     .col-md-5.blog-grid-left
+                        //-         a(href='single.html')
+                        //-             img.img-fluid(src='images/8.jpg' alt='')
+                        //-     .col-md-7.blog-grid-right
+                        //-         h5
+                        //-             a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                        //-         .sub-meta
+                        //-             span
+                        //-                 i.far.fa-clock
+                        //-                 |  20 Jan, 2018
+                        //- .blog-grids.row.mb-3
+                        //-     .col-md-5.blog-grid-left
+                        //-         a(href='single.html')
+                        //-             img.img-fluid(src='images/4.jpg' alt='')
+                        //-     .col-md-7.blog-grid-right
+                        //-         h5
+                        //-             a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                        //-         .sub-meta
+                        //-             span
+                        //-                 i.far.fa-clock
+                        //-                 |  20 Jan, 2018
+                        //- .blog-grids.row.mb-3
+                        //-     .col-md-5.blog-grid-left
+                        //-         a(href='single.html')
+                        //-             img.img-fluid(src='images/6.jpg' alt='')
+                        //-     .col-md-7.blog-grid-right
+                        //-         h5
+                        //-             a(href='single.html') Pellentesque dui, non felis. Maecenas male non felis 
+                        //-         .sub-meta
+                        //-             span
+                        //-                 i.far.fa-clock
+                        //-                 |  20 Feb, 2018
+

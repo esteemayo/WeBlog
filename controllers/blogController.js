@@ -30,7 +30,7 @@ exports.resizeBlogImage = catchAsync(async (req, res, next) => {
     req.file.filename = `blog-${id}-${Date.now()}.jpeg`;
 
     await sharp(req.file.buffer)
-        .resize(2000, 1330)
+        .resize(2000, 1333)
         .toFormat('jpeg')
         .jpeg({ quality: 90 })
         .toFile(`public/images/blogs/${req.file.filename}`);
